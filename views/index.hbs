@@ -1,0 +1,45 @@
+<div class="ui container">
+  <div class="column">
+    <h1 align="center">Ethereum Transaction Application</h1>
+    <p>
+      <h3>Primary Account:</h3>
+      <span id="primaryAccount">{{primaryAccount}}</span>: <span
+        id="primaryAccountTokens">{{primaryAccountTokens}}</span>
+    </p>
+    <br>
+    <form id="uploadForm" method='post' action='/upload' enctype="multipart/form-data">
+      <p>Upload a text file with account address</p>
+      <div class="file-upload-wrapper" data-text="Select your file!">
+        <input id="txFile" name="txFile" type="file" class="file-upload-field" value="">
+      </div>
+      <br>
+      <input id="uploadFile" class="ui inverted button" type="submit" value="Upload File">
+
+    </form>
+  </div>
+
+  <br><br>
+
+  <div class="row">
+
+    <div id="loader" class="ui active centered inline loader inverted"></div>
+
+    <table id="resultTable" class="ui celled table">
+      <thead>
+        <tr>
+          <th>Account</th>
+          <th>Balance</th>
+          <th>Transaction Hash</th>
+        </tr>
+      </thead>
+      <tbody id="data">
+        <tr>
+          <td>James</td>
+          <td>24</td>
+          <td>Engineer</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+<br><br>
+</div>
