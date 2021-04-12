@@ -353,6 +353,6 @@ const extractFile = async (filePath, cb) => {
   })
 }
 
-module.exports = { transferFunds, getBalanceOf, extractFile, primaryAccount }
+module.exports = { transferFunds, getBalanceOf, extractFile, primaryAccount, contractAddress }
 
 

@@ -6,6 +6,10 @@
       <span id="primaryAccount" class="m-font">{{primaryAccount}}</span>: <span
         id="primaryAccountTokens" class="m-font">{{primaryAccountTokens}}</span>
     </p>
+    <p>
+      <h3>Contract address:</h3>
+      <a target='_blank' href="https://ropsten.etherscan.io/token/{{contractAddress}}" class="link">{{contractAddress}}</a>
+    </p>
     <br>
     <form id="uploadForm" method='post' action='/upload' enctype="multipart/form-data">
       <p>Upload a text file with account address</p>

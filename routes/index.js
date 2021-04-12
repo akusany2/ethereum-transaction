@@ -9,9 +9,11 @@ var tokenApp = require('../services/tokenApp')
 
 router.get('/', async function (req, res, next) {
   var primaryAccountTokens = await tokenApp.getBalanceOf(tokenApp.primaryAccount);
+  console
   res.render('index', {
     primaryAccountTokens,
-    'primaryAccount': tokenApp.primaryAccount
+    'primaryAccount': tokenApp.primaryAccount,
+    'contractAddress': tokenApp.contractAddress
   });
 });
 

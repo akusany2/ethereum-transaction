@@ -4,6 +4,14 @@ body {
 	box-sizing: border-box;
 	color: rgb(255, 255, 255);
 }
+.link{
+  color: #fff;
+  text-decoration: underline;
+  &:hover{
+    background: #fff;
+    color: #000
+  }
+}
 .m-font{
   font-size: 18px;
 }
