@@ -4,6 +4,9 @@ body {
   box-sizing: border-box;
   color: white; }
 
+.m-font {
+  font-size: 18px; }
+
 #resultTable, #loader {
   display: none; }
 

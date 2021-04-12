@@ -29,15 +29,17 @@ $(document).ready(function () {
   });
   var pouplateData = function (data) {
     var html = '';
-    $("#primaryAccount").html(Object.keys(data)[1])
+    // $("#primaryAccount").html(Object.keys(data)[1])
     $("#primaryAccountTokens").html(data.primaryAccountTokens)
-    data.txArray.forEach(item => {
+    data.txDetailsArray.forEach(item => {
       html += `<tr><td>${item.account}</td><td>${item.balance}</td><td><a target='_blank' href="https://ropsten.etherscan.io/tx/${item.txHash}">${item.txHash}</a></td></tr>`;
     });
     $("#data").html(html)
   }
 
   $("form").on("change", function () {
+    
+    $("#uploadFile").attr('disabled', !$("#txFile").val())
     $(".file-upload-wrapper").attr("data-text", $("#txFile").val().replace(/.*(\/|\\)/, ''));
   });
 });

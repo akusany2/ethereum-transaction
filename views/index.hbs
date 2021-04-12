@@ -3,8 +3,8 @@
     <h1 align="center">Ethereum Transaction Application</h1>
     <p>
       <h3>Primary Account:</h3>
-      <span id="primaryAccount">{{primaryAccount}}</span>: <span
-        id="primaryAccountTokens">{{primaryAccountTokens}}</span>
+      <span id="primaryAccount" class="m-font">{{primaryAccount}}</span>: <span
+        id="primaryAccountTokens" class="m-font">{{primaryAccountTokens}}</span>
     </p>
     <br>
     <form id="uploadForm" method='post' action='/upload' enctype="multipart/form-data">
@@ -13,7 +13,7 @@
         <input id="txFile" name="txFile" type="file" class="file-upload-field" value="">
       </div>
       <br>
-      <input id="uploadFile" class="ui inverted button" type="submit" value="Upload File">
+      <input id="uploadFile" class="ui inverted button" disabled type="submit" value="Upload File">
 
     </form>
   </div>
