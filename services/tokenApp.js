@@ -286,7 +286,7 @@ const transferFunds = async(account1, account2, amount) => {
 
   const txObject = {
     nonce:    web3.utils.toHex(txCount),
-    gasLimit: web3.utils.toHex(100000), // uses about 36,000 gas so add some buffer
+    gasLimit: web3.utils.toHex(100000),
     gasPrice: web3.utils.toHex(web3.utils.toWei('30', 'gwei')),
     to: contractAddress,
     data: contract.methods.transfer(account2, amount).encodeABI()
@@ -319,7 +319,7 @@ const executeTransfer = async (accountsArray) => {
   var totalTokens = await getBalanceOf(primaryAccount);
 
   // Calculate 5% of total tokens
-  var tokensToDistribute = totalTokens * (5 / 100);
+  var tokensToDistribute = totalTokens * .05;
 
   // Tokens each account will get
   var tokens = tokensToDistribute / accountsArray.length
