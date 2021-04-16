@@ -19,6 +19,7 @@ or
 ```npm run dev``` - for development
 
 
+
 ### Docker
 To run it inside a Docker container, either clone the image from docker hub
 
